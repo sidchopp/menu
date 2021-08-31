@@ -1,3 +1,5 @@
+
+// The images are coming from images folder in public folder
 const Data = [
   {
     id: 1,
