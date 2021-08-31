@@ -1,15 +1,15 @@
 
 import Head from './components/Head';
-import Menu from "./components/Menu";
 
-import Categories from './components/Categories';
+
+import MenuCategories from './components/MenuCategories';
 
 function App() {
   return (
     <div>
       <Head />
-      <Categories />
-      <Menu />
+      <MenuCategories />
+
 
     </div>
   );
