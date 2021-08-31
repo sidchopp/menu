@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Data from './Data';
+
 
 function Menu() {
   return (
