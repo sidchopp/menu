@@ -6,8 +6,9 @@ import Data from './Data';
 
 // for dynamic buttons based on each category
 // We are making an array with 'all' and  (items).Hence spread operator
-//A value in the Set may only occur once; it is unique in the Set's collection, so that we get everything in items only once
-// const allCategories = ['all', ...new Set(Data.map((item) => item.category))];
+//A value in the "Set" may only occur once; it is UNIQUE in the Set's collection, so that we get everything in Data only once
+const allCategories = ['all', ...new Set(Data.map((item) => item.category))];
+console.log(allCategories);
 
 
 function MenuCategories() {
@@ -19,7 +20,7 @@ function MenuCategories() {
   //console.log(Data);
 
   // The initial value of categories is 'allCategories' which is an array of 'all' and 'each individual' category
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(allCategories);
 
   // for creating buttons based on category, we will iterate over our ORIGINAL list of Data
   const filterItems = (categ) => {
@@ -47,7 +48,7 @@ function MenuCategories() {
             <h2>our menu</h2>
             <div className="underline"></div>
           </div>
-          <Categories filterItm={filterItems} />
+          <Categories filterItm={filterItems} myCategory={categories} />
           <Menu items={menuItems} />
         </section>
       </main>
