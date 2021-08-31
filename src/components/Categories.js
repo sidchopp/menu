@@ -4,6 +4,9 @@ function Categories({ filterItm }) {
   return (
     <div className="btn-container">
       <button className="filter-btn" onClick={() => {
+        filterItm('all')
+      }}>all</button>
+      <button className="filter-btn" onClick={() => {
         filterItm('breakfast')
       }}>Breakfast</button>
     </div>

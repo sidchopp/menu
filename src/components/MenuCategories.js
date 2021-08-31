@@ -23,6 +23,13 @@ function MenuCategories() {
 
   // for creating buttons based on category, we will iterate over our ORIGINAL list of Data
   const filterItems = (categ) => {
+
+    // for 'all' button'
+    if (categ === 'all') {
+      setMenuItems(Data);
+      return;
+    }
+
     //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
     const newItems = Data.filter((item) => item.category === categ)
     // so if the property category of item(which is coming from Data category) matches with whatever categ i m passing,then change the state of setMenuItems to newItems
